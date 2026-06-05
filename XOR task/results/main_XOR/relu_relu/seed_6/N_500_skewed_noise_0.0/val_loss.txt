@@ -1,0 +1,102 @@
+
+Results for 10% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.6912583709
+Fisher_low                      0.6912475228
+Fisher_high                     0.6936701536
+Fisher_Random_curriculum        0.6913582683
+Fisher_curriculum               0.6830592155
+MCAL                            0.6750231981
+MCpCAL                          0.2524367273
+
+Best Validation Loss: MCpCAL          0.2524367273
+
+
+Results for 20% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.3665125370
+Fisher_low                      0.6916157603
+Fisher_high                     0.6929696202
+Fisher_Random_curriculum        0.3827726543
+Fisher_curriculum               0.6901453137
+MCAL                            0.6159535050
+MCpCAL                          0.1764290035
+
+Best Validation Loss: MCpCAL          0.1764290035
+
+
+Results for 30% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.3061386347
+Fisher_low                      0.6918636560
+Fisher_high                     0.2750604749
+Fisher_Random_curriculum        0.2590812445
+Fisher_curriculum               0.6902324557
+MCAL                            0.6180227995
+MCpCAL                          0.1400427073
+
+Best Validation Loss: MCpCAL          0.1400427073
+
+
+Results for 40% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.1661884785
+Fisher_low                      0.6918205619
+Fisher_high                     0.1627650857
+Fisher_Random_curriculum        0.1307500601
+Fisher_curriculum               0.4865181148
+MCAL                            0.4111216962
+MCpCAL                          0.1462252140
+
+Best Validation Loss: Fisher_Random_curriculum 0.1307500601
+
+
+Results for 50% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.1500045806
+Fisher_low                      0.6921378374
+Fisher_high                     0.1665292084
+Fisher_Random_curriculum        0.1276678443
+Fisher_curriculum               0.4865544140
+MCAL                            0.1444352269
+MCpCAL                          0.1584510654
+
+Best Validation Loss: Fisher_Random_curriculum 0.1276678443
+
+
+Results for 75% Learning
+Activation Functions: ReLU, ReLU
+Epochs: 1000
+
+Validation Loss:
+All samples                     0.1170395538
+Random                          0.1390261501
+Fisher_low                      0.6924982667
+Fisher_high                     0.1581271887
+Fisher_Random_curriculum        0.1177028269
+Fisher_curriculum               0.1150627658
+MCAL                            0.1452203989
+MCpCAL                          0.1234808043
+
+Best Validation Loss: Fisher_curriculum 0.1150627658
+

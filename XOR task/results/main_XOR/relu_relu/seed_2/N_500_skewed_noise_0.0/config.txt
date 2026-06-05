@@ -1,0 +1,21 @@
+SEED: 2
+n_samples: 500
+noise: 0.0
+corner_ratios: Skewed
+learning_percentages: [0.1, 0.2, 0.3, 0.4, 0.5, 0.75]
+eta: 0.003
+eta_min: 3e-05
+Weight_decay: 0.05
+hidden_layers_size: [64, 64, 64]
+activation_functions: [<class 'torch.nn.modules.activation.ReLU'>, <class 'torch.nn.modules.activation.ReLU'>]
+n_input: 2
+n_output: 1
+p: 0.2
+fisher_training_epochs: 50
+budget: [25, 5]
+b: 2
+epochs: [20, 10]
+use_OFE: False
+train_epochs: 1000
+num_bins_for_curriculum: 10
+save_dir: results/main_XOR/relu_relu/seed_2/N_500_skewed_noise_0.0

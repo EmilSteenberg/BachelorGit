@@ -1,0 +1,74 @@
+Mean Accuracies across seeds for skewed corner ratios
+
+Learning Percentage: 10%
+All samples                     0.9908000000
+Random                          0.8986000000
+Fisher_low                      0.8044000000
+Fisher_high                     0.1900000000
+Fisher_Random_curriculum        0.8368000000
+Fisher_curriculum               0.7948000000
+MCAL                            0.9230000000
+MCpCAL                          0.9726000000
+
+Best Mean Accuracy: MCpCAL          0.9726000000
+
+Learning Percentage: 20%
+All samples                     0.9908000000
+Random                          0.9578000000
+Fisher_low                      0.8084000000
+Fisher_high                     0.3800000000
+Fisher_Random_curriculum        0.9174000000
+Fisher_curriculum               0.9048000000
+MCAL                            0.9502000000
+MCpCAL                          0.9878000000
+
+Best Mean Accuracy: MCpCAL          0.9878000000
+
+Learning Percentage: 30%
+All samples                     0.9908000000
+Random                          0.9648000000
+Fisher_low                      0.8090000000
+Fisher_high                     0.9834000000
+Fisher_Random_curriculum        0.9578000000
+Fisher_curriculum               0.9318000000
+MCAL                            0.9506000000
+MCpCAL                          0.9930000000
+
+Best Mean Accuracy: MCpCAL          0.9930000000
+
+Learning Percentage: 40%
+All samples                     0.9908000000
+Random                          0.9680000000
+Fisher_low                      0.8130000000
+Fisher_high                     0.9922000000
+Fisher_Random_curriculum        0.9754000000
+Fisher_curriculum               0.9374000000
+MCAL                            0.9816000000
+MCpCAL                          0.9932000000
+
+Best Mean Accuracy: MCpCAL          0.9932000000
+
+Learning Percentage: 50%
+All samples                     0.9908000000
+Random                          0.9656000000
+Fisher_low                      0.8130000000
+Fisher_high                     0.9930000000
+Fisher_Random_curriculum        0.9716000000
+Fisher_curriculum               0.9688000000
+MCAL                            0.9870000000
+MCpCAL                          0.9926000000
+
+Best Mean Accuracy: Fisher_high     0.9930000000
+
+Learning Percentage: 75%
+All samples                     0.9908000000
+Random                          0.9880000000
+Fisher_low                      0.8154000000
+Fisher_high                     0.9910000000
+Fisher_Random_curriculum        0.9860000000
+Fisher_curriculum               0.9656000000
+MCAL                            0.9914000000
+MCpCAL                          0.9926000000
+
+Best Mean Accuracy: MCpCAL          0.9926000000
+

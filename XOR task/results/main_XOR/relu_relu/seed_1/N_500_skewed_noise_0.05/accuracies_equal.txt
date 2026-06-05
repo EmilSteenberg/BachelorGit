@@ -1,0 +1,84 @@
+
+Results for 10% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.5000000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.5000000000
+Fisher_Random_curriculum        0.5000000000
+Fisher_curriculum               0.5000000000
+MCAL                            0.6300000000
+MCpCAL                          0.8730000000
+
+Best Accuracy: MCpCAL          0.8730000000
+
+
+Results for 20% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.6150000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.8730000000
+Fisher_Random_curriculum        0.5000000000
+Fisher_curriculum               0.5000000000
+MCAL                            0.6510000000
+MCpCAL                          0.8590000000
+
+Best Accuracy: Fisher_high     0.8730000000
+
+
+Results for 30% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.6190000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.8560000000
+Fisher_Random_curriculum        0.5000000000
+Fisher_curriculum               0.5000000000
+MCAL                            0.6500000000
+MCpCAL                          0.8790000000
+
+Best Accuracy: MCpCAL          0.8790000000
+
+
+Results for 40% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.8250000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.8570000000
+Fisher_Random_curriculum        0.8660000000
+Fisher_curriculum               0.5000000000
+MCAL                            0.8780000000
+MCpCAL                          0.8670000000
+
+Best Accuracy: MCAL            0.8780000000
+
+
+Results for 50% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.8000000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.8820000000
+Fisher_Random_curriculum        0.8460000000
+Fisher_curriculum               0.5000000000
+MCAL                            0.8800000000
+MCpCAL                          0.8680000000
+
+Best Accuracy: Fisher_high     0.8820000000
+
+
+Results for 75% Learning
+Activation Functions: ReLU, ReLU
+All samples                     0.8760000000
+Random                          0.8090000000
+Fisher_low                      0.5000000000
+Fisher_high                     0.8850000000
+Fisher_Random_curriculum        0.7450000000
+Fisher_curriculum               0.8310000000
+MCAL                            0.8830000000
+MCpCAL                          0.8850000000
+
+Best Accuracy: Fisher_high     0.8850000000
+
