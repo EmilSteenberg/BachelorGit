@@ -1,0 +1,108 @@
+
+Results for 10% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0006916843
+Fisher_low                      0.0017071712
+Fisher_high                     0.0023382108
+Fisher_Random_curriculum        0.0009162897
+Fisher_curriculum               0.0006913210
+MCAL                            0.0003423334
+MC_URF                          0.0004913197
+MCpCAL                          0.0002937742
+
+Best Validation Loss: MCpCAL          0.0002937742
+
+
+Results for 20% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0005503569
+Fisher_low                      0.0017639488
+Fisher_high                     0.0018527660
+Fisher_Random_curriculum        0.0006458156
+Fisher_curriculum               0.0004181984
+MCAL                            0.0002786811
+MC_URF                          0.0003925808
+MCpCAL                          0.0002552718
+
+Best Validation Loss: MCpCAL          0.0002552718
+
+
+Results for 30% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0002262694
+Fisher_low                      0.0017680486
+Fisher_high                     0.0005732476
+Fisher_Random_curriculum        0.0002863027
+Fisher_curriculum               0.0003395687
+MCAL                            0.0002694995
+MC_URF                          0.0003508457
+MCpCAL                          0.0002506452
+
+Best Validation Loss: Random          0.0002262694
+
+
+Results for 40% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0002445861
+Fisher_low                      0.0016790187
+Fisher_high                     0.0004901449
+Fisher_Random_curriculum        0.0002690699
+Fisher_curriculum               0.0003395059
+MCAL                            0.0002390837
+MC_URF                          0.0002462488
+MCpCAL                          0.0002177242
+
+Best Validation Loss: MCpCAL          0.0002177242
+
+
+Results for 50% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0002309327
+Fisher_low                      0.0016454780
+Fisher_high                     0.0003192874
+Fisher_Random_curriculum        0.0002421870
+Fisher_curriculum               0.0002401197
+MCAL                            0.0002379573
+MC_URF                          0.0002287443
+MCpCAL                          0.0002182886
+
+Best Validation Loss: MCpCAL          0.0002182886
+
+
+Results for 75% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+Validation Loss:
+All samples                     0.0001896991
+Random                          0.0001949940
+Fisher_low                      0.0010205825
+Fisher_high                     0.0001920946
+Fisher_Random_curriculum        0.0002103463
+Fisher_curriculum               0.0002158264
+MCAL                            0.0001933562
+MC_URF                          0.0001957137
+MCpCAL                          0.0001920595
+
+Best Validation Loss: MCpCAL          0.0001920595
+

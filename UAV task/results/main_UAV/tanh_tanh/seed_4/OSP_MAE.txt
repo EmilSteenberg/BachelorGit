@@ -1,0 +1,108 @@
+Results for 10% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0020282
+Fisher_low                         - Total MAE: 0.0044172
+Fisher_high                        - Total MAE: 0.0069465
+Fisher_Random_curriculum           - Total MAE: 0.0019834
+Fisher_curriculum                  - Total MAE: 0.0023891
+MCAL                               - Total MAE: 0.0020962
+MC_URF                             - Total MAE: 0.0027844
+MCpCAL                             - Total MAE: 0.0020138
+
+Best model for test set: Fisher_Random_curriculum: 0.0019834
+
+
+Results for 20% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0023020
+Fisher_low                         - Total MAE: 0.0040456
+Fisher_high                        - Total MAE: 0.0062336
+Fisher_Random_curriculum           - Total MAE: 0.0020508
+Fisher_curriculum                  - Total MAE: 0.0021201
+MCAL                               - Total MAE: 0.0018939
+MC_URF                             - Total MAE: 0.0022166
+MCpCAL                             - Total MAE: 0.0019948
+
+Best model for test set: MCAL             : 0.0018939
+
+
+Results for 30% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0021895
+Fisher_low                         - Total MAE: 0.0041142
+Fisher_high                        - Total MAE: 0.0035593
+Fisher_Random_curriculum           - Total MAE: 0.0019137
+Fisher_curriculum                  - Total MAE: 0.0017945
+MCAL                               - Total MAE: 0.0019411
+MC_URF                             - Total MAE: 0.0023960
+MCpCAL                             - Total MAE: 0.0019479
+
+Best model for test set: Fisher_curriculum: 0.0017945
+
+
+Results for 40% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0020696
+Fisher_low                         - Total MAE: 0.0038791
+Fisher_high                        - Total MAE: 0.0024393
+Fisher_Random_curriculum           - Total MAE: 0.0018864
+Fisher_curriculum                  - Total MAE: 0.0017727
+MCAL                               - Total MAE: 0.0018180
+MC_URF                             - Total MAE: 0.0018606
+MCpCAL                             - Total MAE: 0.0017943
+
+Best model for test set: Fisher_curriculum: 0.0017727
+
+
+Results for 50% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0019365
+Fisher_low                         - Total MAE: 0.0038537
+Fisher_high                        - Total MAE: 0.0021984
+Fisher_Random_curriculum           - Total MAE: 0.0018208
+Fisher_curriculum                  - Total MAE: 0.0017002
+MCAL                               - Total MAE: 0.0017736
+MC_URF                             - Total MAE: 0.0017284
+MCpCAL                             - Total MAE: 0.0017121
+
+Best model for test set: Fisher_curriculum: 0.0017002
+
+
+Results for 75% Learning
+Activation Functions: Tanh, Tanh
+Epochs: 10000
+
+One-Step Prediction MAE for test set:
+All samples                        - Total MAE: 0.0015301
+Random                             - Total MAE: 0.0015546
+Fisher_low                         - Total MAE: 0.0027123
+Fisher_high                        - Total MAE: 0.0015732
+Fisher_Random_curriculum           - Total MAE: 0.0016059
+Fisher_curriculum                  - Total MAE: 0.0016269
+MCAL                               - Total MAE: 0.0015939
+MC_URF                             - Total MAE: 0.0016270
+MCpCAL                             - Total MAE: 0.0015659
+
+Best model for test set: Random           : 0.0015546
+
+

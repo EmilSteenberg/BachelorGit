@@ -1,0 +1,530 @@
+Seed: 0
+  Sampling:
+    Learning percentage: 10%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 0.440 seconds
+      MC_URF                         - Timing: 1.785 seconds
+      MCpCAL                         - Timing: 0.512 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 1.104 seconds
+      MC_URF                         - Timing: 4.526 seconds
+      MCpCAL                         - Timing: 1.392 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 1.794 seconds
+      MC_URF                         - Timing: 7.451 seconds
+      MCpCAL                         - Timing: 2.400 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 2.512 seconds
+      MC_URF                         - Timing: 10.332 seconds
+      MCpCAL                         - Timing: 3.508 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 3.238 seconds
+      MC_URF                         - Timing: 13.103 seconds
+      MCpCAL                         - Timing: 4.661 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.717 seconds
+      MCAL                           - Timing: 5.100 seconds
+      MC_URF                         - Timing: 19.946 seconds
+      MCpCAL                         - Timing: 7.467 seconds
+  Training:
+    Learning percentage: 10%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 53.723 seconds
+      Fisher_low                     - Timing: 59.094 seconds
+      Fisher_high                    - Timing: 51.662 seconds
+      Fisher_Random_curriculum       - Timing: 61.994 seconds
+      Fisher_curriculum              - Timing: 52.572 seconds
+      MCAL                           - Timing: 59.112 seconds
+      MC_URF                         - Timing: 59.302 seconds
+      MCpCAL                         - Timing: 55.509 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 66.187 seconds
+      Fisher_low                     - Timing: 70.321 seconds
+      Fisher_high                    - Timing: 61.618 seconds
+      Fisher_Random_curriculum       - Timing: 59.674 seconds
+      Fisher_curriculum              - Timing: 63.220 seconds
+      MCAL                           - Timing: 73.980 seconds
+      MC_URF                         - Timing: 64.541 seconds
+      MCpCAL                         - Timing: 72.036 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 81.235 seconds
+      Fisher_low                     - Timing: 76.280 seconds
+      Fisher_high                    - Timing: 75.747 seconds
+      Fisher_Random_curriculum       - Timing: 75.360 seconds
+      Fisher_curriculum              - Timing: 75.766 seconds
+      MCAL                           - Timing: 88.023 seconds
+      MC_URF                         - Timing: 83.309 seconds
+      MCpCAL                         - Timing: 85.493 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 88.374 seconds
+      Fisher_low                     - Timing: 83.515 seconds
+      Fisher_high                    - Timing: 82.299 seconds
+      Fisher_Random_curriculum       - Timing: 84.648 seconds
+      Fisher_curriculum              - Timing: 78.060 seconds
+      MCAL                           - Timing: 93.273 seconds
+      MC_URF                         - Timing: 83.721 seconds
+      MCpCAL                         - Timing: 83.604 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 97.648 seconds
+      Fisher_low                     - Timing: 90.404 seconds
+      Fisher_high                    - Timing: 89.129 seconds
+      Fisher_Random_curriculum       - Timing: 82.102 seconds
+      Fisher_curriculum              - Timing: 84.061 seconds
+      MCAL                           - Timing: 91.046 seconds
+      MC_URF                         - Timing: 96.638 seconds
+      MCpCAL                         - Timing: 94.293 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 134.789 seconds
+      Random                         - Timing: 111.424 seconds
+      Fisher_low                     - Timing: 117.135 seconds
+      Fisher_high                    - Timing: 119.627 seconds
+      Fisher_Random_curriculum       - Timing: 101.086 seconds
+      Fisher_curriculum              - Timing: 98.011 seconds
+      MCAL                           - Timing: 108.375 seconds
+      MC_URF                         - Timing: 118.762 seconds
+      MCpCAL                         - Timing: 116.545 seconds
+
+Seed: 1
+  Sampling:
+    Learning percentage: 10%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 0.439 seconds
+      MC_URF                         - Timing: 1.576 seconds
+      MCpCAL                         - Timing: 0.518 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 1.099 seconds
+      MC_URF                         - Timing: 4.143 seconds
+      MCpCAL                         - Timing: 1.396 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 1.791 seconds
+      MC_URF                         - Timing: 6.975 seconds
+      MCpCAL                         - Timing: 2.407 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 2.510 seconds
+      MC_URF                         - Timing: 9.810 seconds
+      MCpCAL                         - Timing: 3.515 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 3.232 seconds
+      MC_URF                         - Timing: 12.508 seconds
+      MCpCAL                         - Timing: 4.666 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.224 seconds
+      MCAL                           - Timing: 5.095 seconds
+      MC_URF                         - Timing: 19.374 seconds
+      MCpCAL                         - Timing: 7.476 seconds
+  Training:
+    Learning percentage: 10%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 58.604 seconds
+      Fisher_low                     - Timing: 60.602 seconds
+      Fisher_high                    - Timing: 58.267 seconds
+      Fisher_Random_curriculum       - Timing: 54.355 seconds
+      Fisher_curriculum              - Timing: 57.525 seconds
+      MCAL                           - Timing: 59.919 seconds
+      MC_URF                         - Timing: 59.632 seconds
+      MCpCAL                         - Timing: 55.395 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 63.735 seconds
+      Fisher_low                     - Timing: 60.759 seconds
+      Fisher_high                    - Timing: 65.864 seconds
+      Fisher_Random_curriculum       - Timing: 60.807 seconds
+      Fisher_curriculum              - Timing: 61.586 seconds
+      MCAL                           - Timing: 69.275 seconds
+      MC_URF                         - Timing: 71.197 seconds
+      MCpCAL                         - Timing: 75.873 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 74.130 seconds
+      Fisher_low                     - Timing: 77.300 seconds
+      Fisher_high                    - Timing: 74.357 seconds
+      Fisher_Random_curriculum       - Timing: 71.711 seconds
+      Fisher_curriculum              - Timing: 69.842 seconds
+      MCAL                           - Timing: 81.923 seconds
+      MC_URF                         - Timing: 80.898 seconds
+      MCpCAL                         - Timing: 81.259 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 77.909 seconds
+      Fisher_low                     - Timing: 86.141 seconds
+      Fisher_high                    - Timing: 80.475 seconds
+      Fisher_Random_curriculum       - Timing: 79.840 seconds
+      Fisher_curriculum              - Timing: 74.269 seconds
+      MCAL                           - Timing: 83.287 seconds
+      MC_URF                         - Timing: 88.324 seconds
+      MCpCAL                         - Timing: 84.737 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 92.954 seconds
+      Fisher_low                     - Timing: 92.810 seconds
+      Fisher_high                    - Timing: 93.119 seconds
+      Fisher_Random_curriculum       - Timing: 83.207 seconds
+      Fisher_curriculum              - Timing: 86.002 seconds
+      MCAL                           - Timing: 104.088 seconds
+      MC_URF                         - Timing: 97.079 seconds
+      MCpCAL                         - Timing: 97.311 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 137.097 seconds
+      Random                         - Timing: 115.891 seconds
+      Fisher_low                     - Timing: 120.357 seconds
+      Fisher_high                    - Timing: 112.053 seconds
+      Fisher_Random_curriculum       - Timing: 95.852 seconds
+      Fisher_curriculum              - Timing: 100.527 seconds
+      MCAL                           - Timing: 111.468 seconds
+      MC_URF                         - Timing: 116.972 seconds
+      MCpCAL                         - Timing: 114.661 seconds
+
+Seed: 2
+  Sampling:
+    Learning percentage: 10%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 0.445 seconds
+      MC_URF                         - Timing: 1.599 seconds
+      MCpCAL                         - Timing: 0.538 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 1.113 seconds
+      MC_URF                         - Timing: 4.340 seconds
+      MCpCAL                         - Timing: 1.474 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 1.802 seconds
+      MC_URF                         - Timing: 7.356 seconds
+      MCpCAL                         - Timing: 2.540 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 2.519 seconds
+      MC_URF                         - Timing: 10.448 seconds
+      MCpCAL                         - Timing: 3.685 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 3.251 seconds
+      MC_URF                         - Timing: 13.331 seconds
+      MCpCAL                         - Timing: 4.871 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.278 seconds
+      MCAL                           - Timing: 5.120 seconds
+      MC_URF                         - Timing: 20.171 seconds
+      MCpCAL                         - Timing: 7.761 seconds
+  Training:
+    Learning percentage: 10%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 52.144 seconds
+      Fisher_low                     - Timing: 61.542 seconds
+      Fisher_high                    - Timing: 54.854 seconds
+      Fisher_Random_curriculum       - Timing: 53.918 seconds
+      Fisher_curriculum              - Timing: 57.042 seconds
+      MCAL                           - Timing: 57.946 seconds
+      MC_URF                         - Timing: 54.864 seconds
+      MCpCAL                         - Timing: 50.827 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 71.252 seconds
+      Fisher_low                     - Timing: 66.948 seconds
+      Fisher_high                    - Timing: 61.288 seconds
+      Fisher_Random_curriculum       - Timing: 60.430 seconds
+      Fisher_curriculum              - Timing: 58.856 seconds
+      MCAL                           - Timing: 63.812 seconds
+      MC_URF                         - Timing: 66.312 seconds
+      MCpCAL                         - Timing: 65.915 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 71.054 seconds
+      Fisher_low                     - Timing: 73.563 seconds
+      Fisher_high                    - Timing: 72.846 seconds
+      Fisher_Random_curriculum       - Timing: 65.132 seconds
+      Fisher_curriculum              - Timing: 65.092 seconds
+      MCAL                           - Timing: 78.120 seconds
+      MC_URF                         - Timing: 64.635 seconds
+      MCpCAL                         - Timing: 74.448 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 77.955 seconds
+      Fisher_low                     - Timing: 85.272 seconds
+      Fisher_high                    - Timing: 83.129 seconds
+      Fisher_Random_curriculum       - Timing: 71.495 seconds
+      Fisher_curriculum              - Timing: 74.004 seconds
+      MCAL                           - Timing: 83.507 seconds
+      MC_URF                         - Timing: 86.903 seconds
+      MCpCAL                         - Timing: 85.337 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 85.577 seconds
+      Fisher_low                     - Timing: 99.613 seconds
+      Fisher_high                    - Timing: 85.992 seconds
+      Fisher_Random_curriculum       - Timing: 76.552 seconds
+      Fisher_curriculum              - Timing: 76.862 seconds
+      MCAL                           - Timing: 87.934 seconds
+      MC_URF                         - Timing: 92.398 seconds
+      MCpCAL                         - Timing: 90.994 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 135.696 seconds
+      Random                         - Timing: 112.881 seconds
+      Fisher_low                     - Timing: 114.837 seconds
+      Fisher_high                    - Timing: 105.208 seconds
+      Fisher_Random_curriculum       - Timing: 94.160 seconds
+      Fisher_curriculum              - Timing: 96.891 seconds
+      MCAL                           - Timing: 109.674 seconds
+      MC_URF                         - Timing: 121.936 seconds
+      MCpCAL                         - Timing: 118.496 seconds
+
+Seed: 3
+  Sampling:
+    Learning percentage: 10%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 0.476 seconds
+      MC_URF                         - Timing: 1.678 seconds
+      MCpCAL                         - Timing: 0.596 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 1.159 seconds
+      MC_URF                         - Timing: 5.704 seconds
+      MCpCAL                         - Timing: 1.632 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 1.871 seconds
+      MC_URF                         - Timing: 11.971 seconds
+      MCpCAL                         - Timing: 2.998 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 2.577 seconds
+      MC_URF                         - Timing: 15.541 seconds
+      MCpCAL                         - Timing: 4.299 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 3.304 seconds
+      MC_URF                         - Timing: 18.779 seconds
+      MCpCAL                         - Timing: 5.686 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 3.102 seconds
+      MCAL                           - Timing: 5.227 seconds
+      MC_URF                         - Timing: 30.104 seconds
+      MCpCAL                         - Timing: 10.685 seconds
+  Training:
+    Learning percentage: 10%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 57.186 seconds
+      Fisher_low                     - Timing: 55.133 seconds
+      Fisher_high                    - Timing: 52.814 seconds
+      Fisher_Random_curriculum       - Timing: 55.111 seconds
+      Fisher_curriculum              - Timing: 56.187 seconds
+      MCAL                           - Timing: 52.741 seconds
+      MC_URF                         - Timing: 55.806 seconds
+      MCpCAL                         - Timing: 56.320 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 59.936 seconds
+      Fisher_low                     - Timing: 64.232 seconds
+      Fisher_high                    - Timing: 59.818 seconds
+      Fisher_Random_curriculum       - Timing: 58.063 seconds
+      Fisher_curriculum              - Timing: 57.807 seconds
+      MCAL                           - Timing: 61.646 seconds
+      MC_URF                         - Timing: 68.407 seconds
+      MCpCAL                         - Timing: 63.167 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 74.573 seconds
+      Fisher_low                     - Timing: 75.283 seconds
+      Fisher_high                    - Timing: 70.476 seconds
+      Fisher_Random_curriculum       - Timing: 62.836 seconds
+      Fisher_curriculum              - Timing: 72.145 seconds
+      MCAL                           - Timing: 78.130 seconds
+      MC_URF                         - Timing: 78.429 seconds
+      MCpCAL                         - Timing: 73.739 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 77.419 seconds
+      Fisher_low                     - Timing: 78.034 seconds
+      Fisher_high                    - Timing: 82.217 seconds
+      Fisher_Random_curriculum       - Timing: 80.308 seconds
+      Fisher_curriculum              - Timing: 68.860 seconds
+      MCAL                           - Timing: 83.054 seconds
+      MC_URF                         - Timing: 84.739 seconds
+      MCpCAL                         - Timing: 81.482 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 89.005 seconds
+      Fisher_low                     - Timing: 94.899 seconds
+      Fisher_high                    - Timing: 89.906 seconds
+      Fisher_Random_curriculum       - Timing: 84.960 seconds
+      Fisher_curriculum              - Timing: 76.454 seconds
+      MCAL                           - Timing: 88.432 seconds
+      MC_URF                         - Timing: 93.671 seconds
+      MCpCAL                         - Timing: 96.009 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 131.046 seconds
+      Random                         - Timing: 113.725 seconds
+      Fisher_low                     - Timing: 109.610 seconds
+      Fisher_high                    - Timing: 109.235 seconds
+      Fisher_Random_curriculum       - Timing: 94.649 seconds
+      Fisher_curriculum              - Timing: 91.169 seconds
+      MCAL                           - Timing: 109.423 seconds
+      MC_URF                         - Timing: 107.204 seconds
+      MCpCAL                         - Timing: 107.532 seconds
+
+Seed: 4
+  Sampling:
+    Learning percentage: 10%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.000 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 0.555 seconds
+      MC_URF                         - Timing: 2.972 seconds
+      MCpCAL                         - Timing: 0.712 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 1.367 seconds
+      MC_URF                         - Timing: 8.813 seconds
+      MCpCAL                         - Timing: 1.956 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 2.184 seconds
+      MC_URF                         - Timing: 12.168 seconds
+      MCpCAL                         - Timing: 3.328 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 2.991 seconds
+      MC_URF                         - Timing: 15.834 seconds
+      MCpCAL                         - Timing: 5.400 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.001 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 4.069 seconds
+      MC_URF                         - Timing: 20.221 seconds
+      MCpCAL                         - Timing: 10.176 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 0.000 seconds
+      Random                         - Timing: 0.002 seconds
+      Fisher                         - Timing: 5.454 seconds
+      MCAL                           - Timing: 6.725 seconds
+      MC_URF                         - Timing: 30.371 seconds
+      MCpCAL                         - Timing: 14.701 seconds
+  Training:
+    Learning percentage: 10%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 56.045 seconds
+      Fisher_low                     - Timing: 59.363 seconds
+      Fisher_high                    - Timing: 55.616 seconds
+      Fisher_Random_curriculum       - Timing: 52.007 seconds
+      Fisher_curriculum              - Timing: 56.800 seconds
+      MCAL                           - Timing: 57.746 seconds
+      MC_URF                         - Timing: 55.918 seconds
+      MCpCAL                         - Timing: 55.549 seconds
+    Learning percentage: 20%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 61.632 seconds
+      Fisher_low                     - Timing: 61.038 seconds
+      Fisher_high                    - Timing: 66.364 seconds
+      Fisher_Random_curriculum       - Timing: 59.912 seconds
+      Fisher_curriculum              - Timing: 56.416 seconds
+      MCAL                           - Timing: 65.664 seconds
+      MC_URF                         - Timing: 62.745 seconds
+      MCpCAL                         - Timing: 65.814 seconds
+    Learning percentage: 30%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 71.838 seconds
+      Fisher_low                     - Timing: 75.306 seconds
+      Fisher_high                    - Timing: 70.217 seconds
+      Fisher_Random_curriculum       - Timing: 72.934 seconds
+      Fisher_curriculum              - Timing: 66.378 seconds
+      MCAL                           - Timing: 71.844 seconds
+      MC_URF                         - Timing: 74.515 seconds
+      MCpCAL                         - Timing: 75.720 seconds
+    Learning percentage: 40%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 80.324 seconds
+      Fisher_low                     - Timing: 79.593 seconds
+      Fisher_high                    - Timing: 78.894 seconds
+      Fisher_Random_curriculum       - Timing: 80.763 seconds
+      Fisher_curriculum              - Timing: 69.247 seconds
+      MCAL                           - Timing: 80.746 seconds
+      MC_URF                         - Timing: 83.449 seconds
+      MCpCAL                         - Timing: 80.153 seconds
+    Learning percentage: 50%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 88.033 seconds
+      Fisher_low                     - Timing: 89.310 seconds
+      Fisher_high                    - Timing: 87.924 seconds
+      Fisher_Random_curriculum       - Timing: 78.578 seconds
+      Fisher_curriculum              - Timing: 85.446 seconds
+      MCAL                           - Timing: 88.133 seconds
+      MC_URF                         - Timing: 87.305 seconds
+      MCpCAL                         - Timing: 87.668 seconds
+    Learning percentage: 75%
+      All samples                    - Timing: 139.826 seconds
+      Random                         - Timing: 109.819 seconds
+      Fisher_low                     - Timing: 110.750 seconds
+      Fisher_high                    - Timing: 111.891 seconds
+      Fisher_Random_curriculum       - Timing: 98.184 seconds
+      Fisher_curriculum              - Timing: 100.700 seconds
+      MCAL                           - Timing: 110.311 seconds
+      MC_URF                         - Timing: 111.453 seconds
+      MCpCAL                         - Timing: 114.744 seconds
+

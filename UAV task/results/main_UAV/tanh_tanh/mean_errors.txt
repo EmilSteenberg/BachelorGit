@@ -1,0 +1,72 @@
+Learning percentage: 10%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0020098
+Fisher_low                     - Mean MAE: 0.0038400
+Fisher_high                    - Mean MAE: 0.0068137
+Fisher_Random_curriculum       - Mean MAE: 0.0022099
+Fisher_curriculum              - Mean MAE: 0.0021138
+MCAL                           - Mean MAE: 0.0021466
+MC_URF                         - Mean MAE: 0.0021685
+MCpCAL                         - Mean MAE: 0.0020011
+Best method: MCpCAL with MAE: 0.0020011
+
+Learning percentage: 20%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0019083
+Fisher_low                     - Mean MAE: 0.0036812
+Fisher_high                    - Mean MAE: 0.0061303
+Fisher_Random_curriculum       - Mean MAE: 0.0019386
+Fisher_curriculum              - Mean MAE: 0.0018080
+MCAL                           - Mean MAE: 0.0020608
+MC_URF                         - Mean MAE: 0.0019072
+MCpCAL                         - Mean MAE: 0.0019672
+Best method: Fisher_curriculum with MAE: 0.0018080
+
+Learning percentage: 30%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0018868
+Fisher_low                     - Mean MAE: 0.0035859
+Fisher_high                    - Mean MAE: 0.0032488
+Fisher_Random_curriculum       - Mean MAE: 0.0020497
+Fisher_curriculum              - Mean MAE: 0.0016555
+MCAL                           - Mean MAE: 0.0019129
+MC_URF                         - Mean MAE: 0.0019182
+MCpCAL                         - Mean MAE: 0.0018831
+Best method: Fisher_curriculum with MAE: 0.0016555
+
+Learning percentage: 40%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0017535
+Fisher_low                     - Mean MAE: 0.0035176
+Fisher_high                    - Mean MAE: 0.0024608
+Fisher_Random_curriculum       - Mean MAE: 0.0020964
+Fisher_curriculum              - Mean MAE: 0.0016626
+MCAL                           - Mean MAE: 0.0018262
+MC_URF                         - Mean MAE: 0.0018037
+MCpCAL                         - Mean MAE: 0.0017919
+Best method: Fisher_curriculum with MAE: 0.0016626
+
+Learning percentage: 50%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0017283
+Fisher_low                     - Mean MAE: 0.0033029
+Fisher_high                    - Mean MAE: 0.0021613
+Fisher_Random_curriculum       - Mean MAE: 0.0018358
+Fisher_curriculum              - Mean MAE: 0.0016066
+MCAL                           - Mean MAE: 0.0018033
+MC_URF                         - Mean MAE: 0.0017579
+MCpCAL                         - Mean MAE: 0.0017299
+Best method: Fisher_curriculum with MAE: 0.0016066
+
+Learning percentage: 75%
+All samples                    - Mean MAE: 0.0015271
+Random                         - Mean MAE: 0.0015491
+Fisher_low                     - Mean MAE: 0.0022250
+Fisher_high                    - Mean MAE: 0.0015932
+Fisher_Random_curriculum       - Mean MAE: 0.0015907
+Fisher_curriculum              - Mean MAE: 0.0015967
+MCAL                           - Mean MAE: 0.0015846
+MC_URF                         - Mean MAE: 0.0015899
+MCpCAL                         - Mean MAE: 0.0015762
+Best method: Random with MAE: 0.0015491
+

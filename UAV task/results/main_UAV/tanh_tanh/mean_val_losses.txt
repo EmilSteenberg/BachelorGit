@@ -1,0 +1,72 @@
+Learning percentage: 10%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0003965285
+Fisher_low                     - Mean Validation Loss: 0.0015950601
+Fisher_high                    - Mean Validation Loss: 0.0018051684
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0005155844
+Fisher_curriculum              - Mean Validation Loss: 0.0004597811
+MCAL                           - Mean Validation Loss: 0.0003436148
+MC_URF                         - Mean Validation Loss: 0.0004314014
+MCpCAL                         - Mean Validation Loss: 0.0002796639
+Best method: MCpCAL with Mean Validation Loss: 0.0002796639
+
+Learning percentage: 20%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0003569015
+Fisher_low                     - Mean Validation Loss: 0.0015840423
+Fisher_high                    - Mean Validation Loss: 0.0015365080
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0003730144
+Fisher_curriculum              - Mean Validation Loss: 0.0003152811
+MCAL                           - Mean Validation Loss: 0.0002866499
+MC_URF                         - Mean Validation Loss: 0.0003548010
+MCpCAL                         - Mean Validation Loss: 0.0002399443
+Best method: MCpCAL with Mean Validation Loss: 0.0002399443
+
+Learning percentage: 30%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0002918263
+Fisher_low                     - Mean Validation Loss: 0.0015687260
+Fisher_high                    - Mean Validation Loss: 0.0005041683
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0004120261
+Fisher_curriculum              - Mean Validation Loss: 0.0002596131
+MCAL                           - Mean Validation Loss: 0.0002581102
+MC_URF                         - Mean Validation Loss: 0.0003565092
+MCpCAL                         - Mean Validation Loss: 0.0002368635
+Best method: MCpCAL with Mean Validation Loss: 0.0002368635
+
+Learning percentage: 40%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0002661427
+Fisher_low                     - Mean Validation Loss: 0.0015452939
+Fisher_high                    - Mean Validation Loss: 0.0003435198
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0003445914
+Fisher_curriculum              - Mean Validation Loss: 0.0002501741
+MCAL                           - Mean Validation Loss: 0.0002307840
+MC_URF                         - Mean Validation Loss: 0.0002518333
+MCpCAL                         - Mean Validation Loss: 0.0002135590
+Best method: MCpCAL with Mean Validation Loss: 0.0002135590
+
+Learning percentage: 50%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0002221585
+Fisher_low                     - Mean Validation Loss: 0.0014536183
+Fisher_high                    - Mean Validation Loss: 0.0002770979
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0002690128
+Fisher_curriculum              - Mean Validation Loss: 0.0002109090
+MCAL                           - Mean Validation Loss: 0.0002210668
+MC_URF                         - Mean Validation Loss: 0.0002156768
+MCpCAL                         - Mean Validation Loss: 0.0002047451
+Best method: MCpCAL with Mean Validation Loss: 0.0002047451
+
+Learning percentage: 75%
+All samples                    - Mean Validation Loss: 0.0001703630
+Random                         - Mean Validation Loss: 0.0001797449
+Fisher_low                     - Mean Validation Loss: 0.0008818321
+Fisher_high                    - Mean Validation Loss: 0.0001814388
+Fisher_Random_curriculum       - Mean Validation Loss: 0.0001893846
+Fisher_curriculum              - Mean Validation Loss: 0.0002013671
+MCAL                           - Mean Validation Loss: 0.0001779347
+MC_URF                         - Mean Validation Loss: 0.0001794891
+MCpCAL                         - Mean Validation Loss: 0.0001782029
+Best method: MCAL with Mean Validation Loss: 0.0001779347
+

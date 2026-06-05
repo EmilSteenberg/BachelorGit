@@ -5,6 +5,8 @@ There is two subfolders; UAV task and XOR task, which holds the code to run the 
 
 The current results folder contains all of the results used in the actual Bachelor Thesis report. 
 
+The requirements.txt file has all packages and their versions needed to run the code.
+
 To run any of the methods do:
 - Open the main.py file
 - Choose your settings for the experiment in Part 1; Neural Network (NN) architecture, saving setup, sampling parameters, which methods to run, training parameters and what outputs to save.
