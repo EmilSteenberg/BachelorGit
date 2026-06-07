@@ -793,7 +793,44 @@ def mean_error(errors_dict, save_dir):
 
 
 
+# ============================================================================ #
+# Standard deviation of error
+def std_error(errors_dict, save_dir):
+    std_errors_dict = {}
+    SEEDS = [seed for seed in errors_dict.keys()]
+    for lp in errors_dict[SEEDS[0]].keys():
+        method_errors = {}
+        for method in errors_dict[SEEDS[0]][lp].keys():
+            errors = [errors_dict[seed][lp][method] for seed in SEEDS if method in errors_dict[seed][lp]]
+            std_error = np.std(errors, ddof=1)
+            method_errors[method] = std_error
 
+        std_errors_dict[lp] = method_errors
+    
+    with open(os.path.join(save_dir, f'std_errors.txt'), 'w') as f:
+        f.write('')  # Write an empty string to create/overwrite the file
+
+        for lp, method_errors in std_errors_dict.items():
+            f.write(f'Learning percentage: {lp*100:.0f}%\n')
+
+            max_std_error = float('-inf')
+            min_std_error = float('inf')
+            worst_method = None            
+            best_method = None  
+
+            for method, std_error in method_errors.items():
+                f.write(f'{method:<30} - Std of Error: {std_error:.10f}\n')
+                if std_error > max_std_error and method != "All samples":
+                    max_std_error = std_error
+                    worst_method = method
+                
+                if std_error < min_std_error and method != "All samples":
+                    min_std_error = std_error
+                    best_method = method
+
+            f.write(f'\nWorst method: {worst_method} with Std of Error: {max_std_error:.10f}\n')
+            f.write(f'Best method: {best_method} with Std of Error: {min_std_error:.10f}\n')
+            f.write('\n\n')
 
 
 # ============================================================================ #
@@ -829,12 +866,44 @@ def mean_val_loss(val_losses_dict, save_dir):
             f.write(f'Best method: {best_method} with Mean Validation Loss: {min_val_loss:.10f}\n')
             f.write('\n')
 
+# ============================================================================ #
+# Standard deviation of validation loss
+def std_val_loss(val_losses_dict, save_dir):
+    std_val_losses_dict = {}
+    SEEDS = [seed for seed in val_losses_dict.keys()]
+    for lp in val_losses_dict[SEEDS[0]].keys():
+        method_val_losses = {}
+        for method in val_losses_dict[SEEDS[0]][lp].keys():
+            val_losses = [val_losses_dict[seed][lp][method] for seed in SEEDS if method in val_losses_dict[seed][lp]]
+            std_val_loss = np.std(val_losses, ddof=1)
+            method_val_losses[method] = std_val_loss
 
+        std_val_losses_dict[lp] = method_val_losses
+    
+    with open(os.path.join(save_dir, f'std_val_losses.txt'), 'w') as f:
+        f.write('')  # Write an empty string to create/overwrite the file
 
+        for lp, method_val_losses in std_val_losses_dict.items():
+            f.write(f'Learning percentage: {lp*100:.0f}%\n')
 
+            max_std_val_loss = float('-inf')
+            min_std_val_loss = float('inf')
+            worst_method = None            
+            best_method = None  
 
+            for method, std_val_loss in method_val_losses.items():
+                f.write(f'{method:<30} - Std of Validation Loss: {std_val_loss:.10f}\n')
+                if std_val_loss > max_std_val_loss and method != "All samples":
+                    max_std_val_loss = std_val_loss
+                    worst_method = method
+                
+                if std_val_loss < min_std_val_loss and method != "All samples":
+                    min_std_val_loss = std_val_loss
+                    best_method = method
 
-
+            f.write(f'\nWorst method: {worst_method} with Std of Validation Loss: {max_std_val_loss:.10f}\n')
+            f.write(f'Best method: {best_method} with Std of Validation Loss: {min_std_val_loss:.10f}\n')
+            f.write('\n\n')
 
 
 # ============================================================================ #
