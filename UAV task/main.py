@@ -174,7 +174,7 @@ for s, SEED in enumerate(SEEDS):
 
     if Run_Random:
         print("---Random:---")
-        Random_Lidx_list_seed, random_time_dict = run_RandomAL(X_train_current_norm, learning_percentages, SEED)
+        Random_Lidx_list_seed, Random_time_dict = run_RandomAL(X_train_current_norm, learning_percentages, SEED)
 
 
     if Run_Fisher_low or Run_Fisher_high or (Run_Fisher_Random_curriculum and Run_Random) or Run_Fisher_curriculum:
@@ -219,7 +219,7 @@ for s, SEED in enumerate(SEEDS):
 
         if Run_Random:
             indices_dict[SEED][lp]["Random"] = Random_Lidx_list_seed[i]
-            time_dict[SEED]["Sampling"][lp]["Random"] = random_time_dict[i]
+            time_dict[SEED]["Sampling"][lp]["Random"] = Random_time_dict[i]
 
         if Run_Fisher_low or Run_Fisher_high or Run_Fisher_Random_curriculum or Run_Fisher_curriculum:
             time_dict[SEED]["Sampling"][lp]["Fisher"] = fisher_time
@@ -414,8 +414,6 @@ for s, SEED in enumerate(SEEDS):
         "save_dir": save_dir
     }
 
-    seed_dir = f"seed_{SEED}"
-    save_dir = os.path.join(results_dir, file_name, activation_dir, seed_dir)
     os.makedirs(save_dir, exist_ok=True)
     save_config(save_dir, config)
 

@@ -503,6 +503,7 @@ def train_sampling_one_epoch(model, optimizer, X_train, t_train, data_loss, fi_e
     return fi_epochs
 
 def get_FI(X_train, t_train, data_loss, NN_config, seed, epochs):
+    start_time = datetime.datetime.now()
     # Calculate fisher scores
 
     n_input = NN_config["n_input"]
@@ -523,6 +524,9 @@ def get_FI(X_train, t_train, data_loss, NN_config, seed, epochs):
 
     F_auc = torch.trapezoid(fi_epochs, dx=1.0, dim=0)  # Integrate over the iterations to get an overall FI score for each data point
 
+    end_time = datetime.datetime.now()
+    diff_time = (end_time - start_time).total_seconds()
+
     print("Fisher Scores calculated.!")
-    return F_auc
+    return F_auc, diff_time
     

@@ -196,3 +196,57 @@ def mean_accuracies(accuracies_dict, save_dir, corner_ratios):
             
             f.write(f'\nBest Mean Accuracy: {max_accuracy_method:<15} {max_accuracy:.10f}\n\n')
     return mean_accuracies
+
+
+# ============================================================================ #
+# Save times
+def save_timings(timings_dict, save_dir, noise):
+    # timings_dict is a dictionary of the form {seed: {TrainingOrSampling: {learning_percentage: {method: timing}}}}
+    with open(os.path.join(save_dir, f'timings_{noise}.txt'), 'w') as f:
+        f.write('')  # Write an empty string to create/overwrite the file
+
+        for seed, timing_types in timings_dict.items():
+            f.write(f'Seed: {seed}\n')
+            for timing_type, learning_percentages in timing_types.items():
+                f.write(f'  {timing_type}:\n')
+                for lp, method_timings in learning_percentages.items():
+                    f.write(f'    Learning percentage: {lp*100:.0f}%\n')
+                    for method, timing in method_timings.items():
+                        f.write(f'      {method:<30} - Timing: {timing:.3f} seconds\n')
+            f.write('\n')
+
+def save_mean_timings(timings_dict, save_dir, noise):
+    # timings_dict is a dictionary of the form {seed:{TrainingOrSampling: {learning_percentage: {method: mean_timing}}}}
+    SEEDS = [seed for seed in timings_dict.keys()]
+    mean_timings = {}
+    for timing_type in timings_dict[SEEDS[0]].keys():
+        mean_timings[timing_type] = {}
+        for lp in timings_dict[SEEDS[0]][timing_type].keys():
+            method_timings = {}
+            for method in timings_dict[SEEDS[0]][timing_type][lp].keys():
+                timings = [timings_dict[seed][timing_type][lp][method] for seed in SEEDS if method in timings_dict[seed][timing_type][lp]]
+                mean_timing = np.mean(timings)
+                method_timings[method] = mean_timing
+            mean_timings[timing_type][lp] = method_timings
+    
+    with open(os.path.join(save_dir, f'mean_timings_{noise}.txt'), 'w') as f:
+        f.write(f'Mean Timings across seeds for noise={noise}\n\n')
+        for timing_type, learning_percentages in mean_timings.items():
+            f.write(f'{timing_type}:\n')
+            for lp, method_timings in learning_percentages.items():
+                f.write(f'  Learning percentage: {lp*100:.0f}%\n')
+
+                fastest_method = None
+                fastest_time = float('inf')
+
+                for method, mean_timing in method_timings.items():
+                    f.write(f'    {method:<30} - Mean Timing: {mean_timing:.3f} seconds\n')
+
+                    if mean_timing < fastest_time and method != "All samples":
+                        fastest_time = mean_timing
+                        fastest_method = method
+                
+                f.write(f'\n    Fastest Method: {fastest_method:<15} {fastest_time:.3f} seconds\n\n')
+
+            f.write('\n')
+            

@@ -92,6 +92,8 @@ save_XOR_data_plots     = True
 
 save_accuracy           = True
 
+save_times              = True
+
 
 
 # ========== PART 2 ==========
@@ -154,6 +156,8 @@ print("\n\n========== Running sampling methods and saving selected indices and f
 
 indices_dict = {}
 fisher_scores_dict = {}
+time_dict = {}
+
 for s, SEED in enumerate(SEEDS):
     X_train = data_dict[SEED]["X_train"]
     t_train = data_dict[SEED]["t_train"]
@@ -164,19 +168,24 @@ for s, SEED in enumerate(SEEDS):
     set_seed(SEED)
     indices_dict[SEED] = {}
     fisher_scores_dict[SEED] = {}
+    time_dict[SEED] = {}
+    time_dict[SEED]["Sampling"] = {}
 
     if Run_Allsamples:
         print("---All samples:---")
+        All_time_start = datetime.datetime.now()
         All_samples_Lidx = np.arange(X_train.shape[0])
         All_samples_Lidx_list = [All_samples_Lidx]
+        All_time_end = datetime.datetime.now()
+        All_time = (All_time_end - All_time_start).total_seconds()
 
     if Run_Random:
         print("---Random:---")
-        Random_Lidx_list_seed = run_RandomAL(X_train, learning_percentages, SEED)
+        Random_Lidx_list_seed, Random_time_dict = run_RandomAL(X_train, learning_percentages, SEED)
 
     if Run_Fisher_low or Run_Fisher_high or (Run_Fisher_Random_curriculum and Run_Random) or Run_Fisher_curriculum:
         print("---Calculating fisher scores for pruning---")
-        F_i = get_FI(X_train, t_train, data_loss, NN_config, SEED, epochs=fisher_epochs)
+        F_i, fisher_time = get_FI(X_train, t_train, data_loss, NN_config, SEED, epochs=fisher_epochs)
         fisher_scores_dict[SEED] = F_i.cpu().numpy()
         
         if Run_Fisher_low:
@@ -189,24 +198,30 @@ for s, SEED in enumerate(SEEDS):
 
     if Run_MCAL:
         print("---MC-Dropout:---")
-        MCAL_Lidx_list_seed, _ = run_MCAL(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, SEED, NN_config, epochs)
+        MCAL_Lidx_list_seed, _ , MCAL_time_dict = run_MCAL(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, SEED, NN_config, epochs)
 
     if Run_MC_URF:
         print("---MC-Dropout + URFEAL:---")
-        MC_URF_Lidx_list_seed, _ = run_MC_URF(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, SEED, NN_config, epochs, radius=0.3, beta=5, use_OFE=use_OFE)
+        MC_URF_Lidx_list_seed, _, MC_URF_time_dict = run_MC_URF(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, SEED, NN_config, epochs, radius=0.3, beta=5, use_OFE=use_OFE)
     
     if Run_MCpCAL:
         print("---MC-Dropout + Coreset:---")
-        MCpCAL_Lidx_list_seed, _ = run_MCpCAL(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, b, SEED, NN_config, epochs=[20, 10])
+        MCpCAL_Lidx_list_seed, _, MCpCAL_time_dict = run_MCpCAL(X_train, t_train, X_val, t_val, data_loss, learning_percentages, budget, b, SEED, NN_config, epochs=[20, 10])
 
     for i, lp in enumerate(learning_percentages):
         indices_dict[SEED][lp] = {}
+        time_dict[SEED]["Sampling"][lp] = {}
         
         if Run_Allsamples:
             indices_dict[SEED][lp]["All samples"] = All_samples_Lidx_list[0]
+            time_dict[SEED]["Sampling"][lp]["All samples"] = All_time
 
         if Run_Random:
             indices_dict[SEED][lp]["Random"] = Random_Lidx_list_seed[i]
+            time_dict[SEED]["Sampling"][lp]["Random"] = Random_time_dict[i]
+
+        if Run_Fisher_low or Run_Fisher_high or Run_Fisher_Random_curriculum or Run_Fisher_curriculum:
+            time_dict[SEED]["Sampling"][lp]["Fisher"] = fisher_time
 
         if Run_Fisher_low:
             indices_dict[SEED][lp]["Fisher_low"] = Fi_low_list[i]
@@ -216,12 +231,15 @@ for s, SEED in enumerate(SEEDS):
 
         if Run_MCAL:
             indices_dict[SEED][lp]["MCAL"] = MCAL_Lidx_list_seed[i]
+            time_dict[SEED]["Sampling"][lp]["MCAL"] = MCAL_time_dict[lp]
 
         if Run_MC_URF:
             indices_dict[SEED][lp]["MC_URF"] = MC_URF_Lidx_list_seed[i]
+            time_dict[SEED]["Sampling"][lp]["MC_URF"] = MC_URF_time_dict[lp]
 
         if Run_MCpCAL:
             indices_dict[SEED][lp]["MCpCAL"] = MCpCAL_Lidx_list_seed[i]
+            time_dict[SEED]["Sampling"][lp]["MCpCAL"] = MCpCAL_time_dict[lp]
 
 
 # ========= PART 4 ==========
@@ -233,7 +251,6 @@ from methods.fisher_random_curriculum import *
 
 models_dict = {}
 history_dict = {}
-time_dict = {}
 
 print("\n\n========== Training final models for each method and saving results ==========")
 
@@ -248,7 +265,7 @@ for s, SEED in enumerate(SEEDS):
 
     models_dict[SEED] = {}
     history_dict[SEED] = {}
-    time_dict[SEED] = {}
+    time_dict[SEED]["Training"] = {}
 
     if Run_Allsamples:
         print("Training final model for all samples...")
@@ -260,12 +277,12 @@ for s, SEED in enumerate(SEEDS):
         print(f"\n---Training final models for L={int(lp*100)}%---")
         models_dict[SEED][lp] = {}
         history_dict[SEED][lp] = {}
-        time_dict[SEED][lp] = {}
+        time_dict[SEED]["Training"][lp] = {}
 
         if Run_Allsamples:
             models_dict[SEED][lp]["All samples"] = All_samples_model
             history_dict[SEED][lp]["All samples"] = All_samples_history
-            time_dict[SEED][lp]["All samples"] = All_samples_time
+            time_dict[SEED]["Training"][lp]["All samples"] = All_samples_time
 
         if Run_Random:
             print("Training Random model...")
@@ -273,23 +290,23 @@ for s, SEED in enumerate(SEEDS):
             print("Done training Random model: time taken = {:.2f} seconds".format(Random_time))
             history_dict[SEED][lp]["Random"] = Random_history
             models_dict[SEED][lp]["Random"] = Random_model
-            time_dict[SEED][lp]["Random"] = Random_time
+            time_dict[SEED]["Training"][lp]["Random"] = Random_time
 
 
         if Run_Fisher_low:
             print("\nTraining Fisher low model...")
-            history_dict[SEED][lp]["Fisher_low"], models_dict[SEED][lp]["Fisher_low"], time_dict[SEED][lp]["Fisher_low"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["Fisher_low"], data_loss, NN_config, idx=indices_dict[SEED][lp]["Fisher_low"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
+            history_dict[SEED][lp]["Fisher_low"], models_dict[SEED][lp]["Fisher_low"], time_dict[SEED]["Training"][lp]["Fisher_low"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["Fisher_low"], data_loss, NN_config, idx=indices_dict[SEED][lp]["Fisher_low"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
 
-            print("Done training Fisher low model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["Fisher_low"]))
+            print("Done training Fisher low model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["Fisher_low"]))
 
         if Run_Fisher_high:
             print("\nTraining Fisher high model...")
-            history_dict[SEED][lp]["Fisher_high"], models_dict[SEED][lp]["Fisher_high"], time_dict[SEED][lp]["Fisher_high"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["Fisher_high"], data_loss, NN_config, idx=indices_dict[SEED][lp]["Fisher_high"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
-            print("Done training Fisher high model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["Fisher_high"]))
+            history_dict[SEED][lp]["Fisher_high"], models_dict[SEED][lp]["Fisher_high"], time_dict[SEED]["Training"][lp]["Fisher_high"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["Fisher_high"], data_loss, NN_config, idx=indices_dict[SEED][lp]["Fisher_high"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
+            print("Done training Fisher high model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["Fisher_high"]))
 
         if Run_Fisher_Random_curriculum and Run_Random:
             print("\nTraining Fisher Random curriculum model...")
-            history_dict[SEED][lp]["Fisher_Random_curriculum"], models_dict[SEED][lp]["Fisher_Random_curriculum"], time_dict[SEED][lp]["Fisher_Random_curriculum"], indices_dict[SEED][lp]["Fisher_Random_curriculum"] = pruning_curriculum_random(
+            history_dict[SEED][lp]["Fisher_Random_curriculum"], models_dict[SEED][lp]["Fisher_Random_curriculum"], time_dict[SEED]["Training"][lp]["Fisher_Random_curriculum"], indices_dict[SEED][lp]["Fisher_Random_curriculum"] = pruning_curriculum_random(
                                                                                                                                                                                                                             X_train, t_train, X_val, t_val, data_loss,
                                                                                                                                                                                                                             F_i,  
                                                                                                                                                                                                                             indices_dict[SEED][lp]["Random"],
@@ -298,11 +315,11 @@ for s, SEED in enumerate(SEEDS):
                                                                                                                                                                                                                             n_prints, 
                                                                                                                                                                                                                             num_bins_for_curriculum, 
                                                                                                                                                                                                                             train_epochs) 
-            print("Done training Fisher Random curriculum model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["Fisher_Random_curriculum"]))
+            print("Done training Fisher Random curriculum model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["Fisher_Random_curriculum"]))
 
         if Run_Fisher_curriculum:
             print("\nTraining Fisher curriculum model...")
-            history_dict[SEED][lp]["Fisher_curriculum"], models_dict[SEED][lp]["Fisher_curriculum"], time_dict[SEED][lp]["Fisher_curriculum"], indices_dict[SEED][lp]["Fisher_curriculum"] = pruning_curriculum_fisher(
+            history_dict[SEED][lp]["Fisher_curriculum"], models_dict[SEED][lp]["Fisher_curriculum"], time_dict[SEED]["Training"][lp]["Fisher_curriculum"], indices_dict[SEED][lp]["Fisher_curriculum"] = pruning_curriculum_fisher(
                                                                                                                                                                                                         X_train, t_train, X_val, t_val, data_loss, 
                                                                                                                                                                                                         F_i,  
                                                                                                                                                                                                         SEED,
@@ -311,22 +328,22 @@ for s, SEED in enumerate(SEEDS):
                                                                                                                                                                                                         n_prints, 
                                                                                                                                                                                                         num_bins_for_curriculum, 
                                                                                                                                                                                                         train_epochs) 
-            print("Done training Fisher curriculum model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["Fisher_curriculum"]))
+            print("Done training Fisher curriculum model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["Fisher_curriculum"]))
 
         if Run_MCAL:
             print("\nTraining MC-Dropout model...")
-            history_dict[SEED][lp]["MCAL"], models_dict[SEED][lp]["MCAL"], time_dict[SEED][lp]["MCAL"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MCAL"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MCAL"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
-            print("Done training MC-Dropout model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["MCAL"]))
+            history_dict[SEED][lp]["MCAL"], models_dict[SEED][lp]["MCAL"], time_dict[SEED]["Training"][lp]["MCAL"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MCAL"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MCAL"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
+            print("Done training MC-Dropout model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["MCAL"]))
 
         if Run_MC_URF:
             print("\nTraining MC-URF model...")
-            history_dict[SEED][lp]["MC_URF"], models_dict[SEED][lp]["MC_URF"], time_dict[SEED][lp]["MC_URF"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MC_URF"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MC_URF"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
-            print("Done training MC-URF model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["MC_URF"]))
+            history_dict[SEED][lp]["MC_URF"], models_dict[SEED][lp]["MC_URF"], time_dict[SEED]["Training"][lp]["MC_URF"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MC_URF"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MC_URF"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
+            print("Done training MC-URF model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["MC_URF"]))
 
         if Run_MCpCAL:
             print("\nTraining MC-Dropout + Coreset model...")
-            history_dict[SEED][lp]["MCpCAL"], models_dict[SEED][lp]["MCpCAL"], time_dict[SEED][lp]["MCpCAL"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MCpCAL"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MCpCAL"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
-            print("Done training MC-Dropout + Coreset model: time taken = {:.2f} seconds".format(time_dict[SEED][lp]["MCpCAL"]))
+            history_dict[SEED][lp]["MCpCAL"], models_dict[SEED][lp]["MCpCAL"], time_dict[SEED]["Training"][lp]["MCpCAL"] = train_for_N_epochs(X_train, t_train, X_val, t_val, indices_dict[SEED][lp]["MCpCAL"], data_loss, NN_config, idx=indices_dict[SEED][lp]["MCpCAL"], epochs=train_epochs, SEED=SEED, n_prints=n_prints)
+            print("Done training MC-Dropout + Coreset model: time taken = {:.2f} seconds".format(time_dict[SEED]["Training"][lp]["MCpCAL"]))
     seed_time_end = datetime.datetime.now()
     total_seed_time = (seed_time_end - seed_time_start).total_seconds()
     print(f"\nTotal time taken for SEED {SEED}: {total_seed_time:.2f} seconds")
@@ -368,8 +385,6 @@ for s, SEED in enumerate(SEEDS):
         "save_dir": save_dir
     }
 
-    # seed_dir = f"seed_{SEED}"
-    # save_dir = os.path.join(results_dir, file_name, activation_dir, seed_dir)
     os.makedirs(save_dir, exist_ok=True)
     save_config(save_dir, config)
 
@@ -391,7 +406,7 @@ for s, SEED in enumerate(SEEDS):
 # one-step prediction plots and errors, 
 # and saving these results.
 
-from plots import save_val_loss, plot_all_histories, plot_XOR_data, save_accuracies, mean_accuracies
+from plots import save_val_loss, plot_all_histories, plot_XOR_data, save_accuracies, mean_accuracies, save_timings, save_mean_timings
 
 print("\n\n========== Plotting ==========")
 
@@ -488,6 +503,16 @@ for s, SEED in enumerate(models_dict.keys()):
 if save_accuracy:
     save_dir = os.path.join(results_dir, file_name, activation_dir, test_dir)
     os.makedirs(save_dir, exist_ok=True)
-    print("\nCalculating mean accuracies across seeds and saving to file...")
+    print("\n---Calculating mean accuracies across seeds and saving to file---")
     mean_accuracies_equal = mean_accuracies(accuracies_equal_dict, save_dir, corner_ratios="equal")
     mean_accuracies_skewed = mean_accuracies(accuracies_skewed_dict, save_dir, corner_ratios="skewed")
+    print("Mean accuracies done")
+
+if save_times:
+    save_dir = os.path.join(results_dir, file_name, activation_dir, test_dir)
+    print("\n---Saving times to file---")
+    save_timings(time_dict, save_dir, noise=noise)
+    save_mean_timings(time_dict, save_dir, noise=noise)
+    print("Times done")
+
+    
